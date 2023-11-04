@@ -47,7 +47,7 @@ async def guess(ctx, guess: str):
     if a == 4:
         await ctx.respond('恭喜，你猜對拉 ' + ''.join(anslist))
     else:
-        response = f'{a}A{b}B'
+        response = f'{guess}, {a}A{b}B'
         await ctx.respond(response)
 
 bot.run(TOKEN)
