@@ -1,11 +1,11 @@
 import discord
 from discord.ext import commands
 import random
-from dotenv import load_dotenv
 import os
-load_dotenv()
+from decouple import config
 
-TOKEN = os.getenv('DISCORD_TOKEN')
+
+TOKEN = config('DISCORD_TOKEN')
 bot = commands.Bot(command_prefix='/')
 
 ans = set({})
