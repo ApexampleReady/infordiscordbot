@@ -50,4 +50,8 @@ async def guess(ctx, guess: str):
         response = f'{guess}, {a}A{b}B'
         await ctx.respond(response)
 
+@bot.slash_command()
+async def say(ctx, text: str):
+    await ctx.respond(str)
+
 bot.run(TOKEN)
