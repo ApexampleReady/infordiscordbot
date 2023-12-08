@@ -21,10 +21,10 @@ async def start_game(ctx):
         ans.add(random.randint(1, 9))
     print(ans)
     await ctx.respond('我選好號碼了，開始猜八')
+
 @bot.slash_command()
 async def cheat(ctx):
     await ctx.respond(ans)
-
 
 @bot.slash_command()
 async def guess(ctx, guess: str):
