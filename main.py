@@ -28,7 +28,7 @@ async def cheat(ctx):
 
 @bot.slash_command()
 async def guess(ctx, guess: str):
-    if len(set(guess)) != 4 or not guess.isdigit():
+    if len(set(guess)) != 4 or not guess.isdigit() or len(guess) != 4:
         await ctx.respond('請只輸入4位正整數')
         return
 
